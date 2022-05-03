@@ -484,6 +484,7 @@ On synthesizing we get the optmized circuit , in which we can  that only on e fl
 	
 Thus we can say that, the logic which is no way related to primary output will be optimized by synthesis tool.
 
+![opt_check_3](https://user-images.githubusercontent.com/100422485/166403860-c4557ddc-8b45-4e45-9cc3-9864c1ffb844.png)
 
 
 	
