@@ -263,6 +263,7 @@ good_mux_netlist.v : File name to which we want to write the netlist.It can be a
 The netlist is written as a verilog code in terms of standard cell from sky130_fd_sc_hd__tt_025C_1v80.lib. As the netlist is the true representation of the 	    RTL design ,it needs to be simulated to verify ,if tool has synthesized our design correctly.
 To simulate the generated netlist follow the same iverlog simulation flow done above. The only change in the input of iverilog is the netlist file is used 	   in place of RTL design.
 The set of primary inputs & ouputs will remain same for RTL design and synthesized netlist.Thus same test bench can be used.
+![good Mux](https://user-images.githubusercontent.com/100422485/166402431-e9cd1673-e6e5-469a-ac56-d7e84bee76f3.png)
 	
 	
 #  Day2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
@@ -329,6 +330,7 @@ $ Flatten							: to flatten the design
 $ write_verilog -noattr multiple_modules_Flat.v			: to write flattened netlist
 ```
 	
+![flat and hier modules](https://user-images.githubusercontent.com/100422485/166402543-29943035-34bb-4757-9b3c-518a797035b2.png)
 
 
 ## 2.2.3 Submodule Level Synthesis :
@@ -377,9 +379,11 @@ $ dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $ show		
 ```
+![Asynchronous reset](https://user-images.githubusercontent.com/100422485/166401962-70265d94-d649-4939-bf47-98e2e38971de.png)
 	
 	
 2. Asynchronous set D-Flip flop
+![Asynchronous set](https://user-images.githubusercontent.com/100422485/166402283-56518bc6-9b2a-4a81-914e-9f5a6df4fd59.png)
 
 	
 3. Synchronous reset D-Flip flop
@@ -654,6 +658,7 @@ we can see that the ouput waveform for RTL code functional simulation and synthe
 * It can not be used inside 'always' block.		  
 * It is used for instantiating hardware multiple times.
 
+![mux_generate](https://user-images.githubusercontent.com/100422485/166402452-e437e40c-5218-4d84-b8a3-c5c99ed77e3a.png)
 		  
 		  
 		  
