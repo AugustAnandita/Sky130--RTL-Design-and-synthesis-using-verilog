@@ -576,6 +576,7 @@ lets understand the cavest in blocking statements using an example :
 We can see the in the above case the RTL simulation, the latch behaviour is inferred by simulator. This is because the assignmenst are blocking assignment. Thus first value of 'd' is evaluated which will use old value of 'x' as the value of 'x' is evaluated after the first statement.
 
 But on performing the synthesis and GLS, we can see the synthesized & generated netlist simulation is inferring gates inplace of latch, as no past value of 'x' is used for evaluation of 'd'. Thus generated netlist is correct as per code. Thus, this example shows the  synthesis- simulation mismatch due to caveats in blocking statements.										   
+![blocking_caveat](https://user-images.githubusercontent.com/100422485/166418674-b872ef7d-8c7d-4770-a3ab-164e66400a84.png)
 											   
 
 # Day5 - If, case, for loop and for generate
